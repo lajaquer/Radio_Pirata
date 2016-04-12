@@ -23,21 +23,18 @@
      \__\/                   \__\/         \__\/                     \__\/    
 ```
 ###Proceso de experimentación de La Jaquer Escool 2016
-
-
-
-# Objetivo, Poner la radio a sonar!
+### Objetivo: Poner la radio a sonar!
 
 ## Orden del Dia
 
-###Clonar este repositorio en los clientes locales (compus de quien venga al parche) y asi refrescar un poco lo aprendido con GitHub & GitHub Pages.
+####Clonar este repositorio en los clientes locales (compus de quien venga al parche) y asi refrescar un poco lo aprendido con GitHub & GitHub Pages.
 
-### Reconectado con la idea de opacidad ---> TOR:
+#### Reconectado con la idea de opacidad ---> TOR:
 https://docs.google.com/presentation/d/1s0i5RAV2gwBj4mg4YaLbroRL5FluqNC6ESt8vGh0ZGM/edit?usp=sharing
 Mirarlo hasta la ultima pg ya que sirve de intro al tema del dia.
 
-###Airtime RadioLibre: Explicar como funciona la interface de programac¡on.
-###Mirar algun clip de radio pirata
+####Airtime RadioLibre: Explicar como funciona la interface de programac¡on.
+####Mirar algun clip de radio pirata
 
 
 
@@ -58,3 +55,6 @@ http://p-node.org/doc/index.php/Radio_Fischli_Weiss
 
 ###Pendiente:
 Grabar un par de cortinas para radiolibre!
+
+#####Sintax de Markdown para editar esta pagina:
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
