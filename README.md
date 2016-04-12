@@ -34,7 +34,9 @@ https://docs.google.com/presentation/d/1s0i5RAV2gwBj4mg4YaLbroRL5FluqNC6ESt8vGh0
 (Mirarlo hasta la ultima pg ya que sirve de intro al tema del dia).
 
 ####Airtime RadioLibre: Explicar como funciona la interface de programac¡on.
-####Mirar algun clip de radio pirata
+####Mirar algun clip de radio pirata: Radio Alice:
+
+```Radio Alice was an Italian free radio broadcasting from Bologna at the end of the 1970s. It started transmitting on 9 February 1976 using an ex-military transmitter on a frequency of 100.6 MHz. The station was closed by the carabinieri on 12 March 1977. Radio Alice then re-opened again for two years and became politically aligned with the autonomism movement. After closure, the frequency was then given by the state to Radio Radicale. Radio Alice's output covered a myriad of subjects: labor protests, poetry, yoga lessons, political analysis, love declarations, cooking recipes, Jefferson Airplane, Area or Beethoven music. Participants in the station included Franco "Bifo" Berardi, Maurizio Torrealta, Filippo Scòzzari and Paolo Ricci. In 2002 some former staff members participated in the founding of Orfeo TV, the first Telestreet pirate TV.```
 
 
 
