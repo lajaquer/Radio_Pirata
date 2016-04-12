@@ -1,0 +1,348 @@
+# Tag name          ;  color
+Untagged            ; #c0c0c0
+Emergencias         ; #ff0000
+Transporte          ; #ffcc66
+oficial             ; #ff00ff
+Vigilancia          ; #21a7ff
+Pirata              ; #ff6666
+Data                ; #8000ff
+Radioaficionados    ; #80ff00
+AP                  ; #ff8000
+taxis               ; #ffff00
+40mts               ; #80ff00
+Otro Uso            ; #008000
+
+# Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+     6923500; PNN                      ; AM                  ;       5600; oficial,40mts
+     7135000; Prog RadioA              ; AM                  ;      10000; Radioaficionados
+     7140000; Cadena HK                ; Narrow FM           ;      10000; 40mts
+     7145000; Cadena Fraternidad       ; Narrow FM           ;      10000; 40mts
+     7210000; musica                   ; AM                  ;       5400; Untagged
+     7315000; EEUU                     ; AM                  ;      10000; 40mts
+     7350000; noticias                 ; AM                  ;       5400; Untagged
+     7365000; Cubanos                  ; AM                  ;       6000; 40mts
+     7385500; ?                        ; AM                  ;      10000; Untagged
+     7405000; Radio Cubana             ; AM                  ;      20000; 40mts
+     7529700; chinos                   ; AM                  ;       4200; Untagged
+     9420000; Religiosa                ; AM                  ;       5400; Untagged
+     9566000; Cubanos                  ; AM                  ;       6000; 40mts
+    13650000; Portugues                ; AM                  ;       7000; Untagged
+    16850000; Transporte               ; Narrow FM           ;      10000; Untagged
+   116000000; AP                       ; AM                  ;      10000; AP
+   117000000; Ap bot arm               ; AM                  ;      10000; AP
+   118101000; AP                       ; AM                  ;      10000; AP
+   118600000; AP Olaya                 ; Narrow FM           ;      10000; AP
+   118900000; Torre Olaya              ; Narrow FM           ;      10000; AP
+   119202000; NAL                      ; AM                  ;      10000; AP
+   119300000; Ap                       ; AM                  ;      10000; AP
+   119750000; AP                       ; AM                  ;       9000; AP
+   121100000; AP JMC                   ; AM                  ;      10000; AP
+   121793000; ?                        ; AM                  ;      10000; Untagged
+   121900000; AP superficie            ; AM                  ;      10000; AP
+   122801000; M                        ; AM                  ;      10000; Untagged
+   123400000; Ultraliviano             ; AM                  ;       9000; AP
+   123494000; armonico                 ; AM                  ;      10000; Untagged
+   123700500; M                        ; AM                  ;      10000; Untagged
+   123879000; M                        ; AM                  ;      10000; Untagged
+   124200000; AP                       ; AM                  ;      10000; AP
+   124293000; AP                       ; AM                  ;      10000; AP
+   125000000; AP Bot                   ; AM                  ;      10000; AP
+   126101000; AP                       ; AM                  ;      10000; AP
+   127202000; AP                       ; AM                  ;      10000; AP
+   137620000; sat                      ; Narrow FM           ;      10000; Radioaficionados
+   138125500; Control V                ; Narrow FM           ;      10000; Vigilancia
+   138138000; Control Delfin           ; Narrow FM           ;      10000; Vigilancia
+   138925000; ?                        ; Narrow FM           ;      10000; Untagged
+   139100400; ?                        ; Narrow FM           ;      10000; Untagged
+   139987000; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   140174500; ?                        ; Narrow FM           ;      10000; Untagged
+   140350500; Transporte               ; Narrow FM           ;      10000; Transporte
+   142112000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   142385000; Aguila                   ; Narrow FM           ;      10000; Transporte
+   142400500; ?                        ; Narrow FM           ;      10000; Untagged
+   142539500; data                     ; Narrow FM           ;      10000; Data
+   142775000; ?                        ; Narrow FM           ;      10000; Untagged
+   143125000; Finca La Cocodrila       ; Narrow FM           ;      10000; Otro Uso
+   143162500; Control                  ; Narrow FM           ;      10000; Vigilancia
+   143237000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   143462000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   143476000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   143600000; ?                        ; Narrow FM           ;      10000; Untagged
+   143700000; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   143724000; ?                        ; Narrow FM           ;      10000; Untagged
+   143786900; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   143895500; Trunking                 ; Narrow FM           ;      10000; Data
+   143915300; Trunking                 ; Narrow FM           ;      10000; Data
+   143983100; ?                        ; Narrow FM           ;      10000; Untagged
+   144082700; Control V                ; Narrow FM           ;      10000; Vigilancia
+   144100000; armonico144.700          ; Narrow FM           ;      10800; Untagged
+   144185000; pirata                   ; Narrow FM           ;      10000; Untagged
+   144198500; ?                        ; Narrow FM           ;      15000; Transporte
+   144312600; RadioA                   ; Narrow FM           ;      10000; Radioaficionados
+   144330000; RadioA                   ; Narrow FM           ;      10000; Radioaficionados
+   144372500; data?                    ; Narrow FM           ;      10000; Pirata,Data
+   144388000; taxi?                    ; Narrow FM           ;      10000; Pirata
+   144424400; ?                        ; Narrow FM           ;      10000; Untagged
+   144495000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   144512500; Linea 1 / Metro          ; Narrow FM           ;      15000; oficial
+   144682800; Control V                ; Narrow FM           ;      10000; Vigilancia
+   144700000; Control V                ; Narrow FM           ;      10800; Vigilancia
+   144762000; Bus                      ; Narrow FM           ;      10000; Transporte
+   144845900; ?                        ; Narrow FM           ;      10000; Vigilancia
+   144862500; porteria udep Belen      ; Narrow FM           ;      13400; Vigilancia
+   144900000; RadioA                   ; Narrow FM           ;      10000; Radioaficionados
+   145169700; Centurion                ; Narrow FM           ;      10000; Vigilancia
+   145187000; Centurion CC             ; Narrow FM           ;      10000; Vigilancia
+   145211500; ?                        ; Narrow FM           ;      10000; Vigilancia
+   145362000; Trunking                 ; Narrow FM           ;      10000; Data
+   145372700; RadioA                   ; Narrow FM           ;      10000; Radioaficionados
+   145390000; RadioA / Fracol          ; Narrow FM           ;      10000; Radioaficionados
+   145395300; ?                        ; Narrow FM           ;      10000; Vigilancia
+   145400100; ?                        ; Narrow FM           ;      10000; Vigilancia
+   145412500; TT Bello Tramo Norte     ; Narrow FM           ;      10000; oficial
+   145499500; transporte Carga         ; Narrow FM           ;      10000; Transporte
+   145512000; ? 1024                   ; Narrow FM           ;      10000; Untagged
+   145525500; Taxi Env                 ; Narrow FM           ;      10000; taxis
+   145550000; ?                        ; Narrow FM           ;      10000; Untagged
+   145670400; taxi                     ; Narrow FM           ;      10000; taxis
+   145686500; Taxi Env                 ; Narrow FM           ;      10000; taxis
+   145762500; Paises?                  ; Narrow FM           ;      10000; Vigilancia
+   145800000; ISS                      ; Narrow FM           ;      10000; Radioaficionados
+   145810400; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   145936500; taxi                     ; Narrow FM           ;      10000; taxis
+   146005800; piratax t67              ; Narrow FM           ;      10000; Pirata
+   146100200; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   146130000; Inverso HK4LRM           ; Narrow FM           ;       8000; Radioaficionados
+   146139000; Control v (SegurCol)     ; Narrow FM           ;      10000; Vigilancia
+   146150000; Control Vigilancia       ; Narrow FM           ;      10000; Vigilancia
+   146221000; Armonico NAL             ; Narrow FM           ;      10000; Radioaficionados
+   146287000; taxi                     ; Narrow FM           ;      10000; taxis
+   146310000; Armonico RCA             ; Narrow FM           ;      10000; Radioaficionados
+   146325300; ?                        ; Narrow FM           ;      10000; Untagged
+   146460000; SIMPLEX                  ; Narrow FM           ;      10000; Radioaficionados
+   146462500; taxi                     ; Narrow FM           ;      10000; taxis
+   146518700; ?                        ; Narrow FM           ;      10000; Vigilancia
+   146534000; ?                        ; Narrow FM           ;      10000; Untagged
+   146563500; halcon                   ; Narrow FM           ;      10000; Vigilancia
+   146625000; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   146650000; Control cajeros          ; Narrow FM           ;      10000; Vigilancia
+   146700500; vigilancia bingo         ; Narrow FM           ;      10000; Vigilancia
+   146730000; HK4LRM                   ; Narrow FM           ;      10000; Radioaficionados
+   146780000; cartuchito               ; Narrow FM           ;      10000; Untagged
+   146812000; taxi                     ; Narrow FM           ;      10000; taxis
+   146827000; Vigilancia *             ; Narrow FM           ;      10000; Vigilancia
+   146864000; ?                        ; Narrow FM           ;      10000; Untagged
+   146881200; piratax-2-               ; Narrow FM           ;      10000; Pirata
+   146910000; RCA                      ; Narrow FM           ;      10000; Radioaficionados
+   146950600; QUIROZ                   ; Narrow FM           ;      10000; Untagged
+   147006000; Piratax                  ; Narrow FM           ;      11200; Pirata
+   147036100; Trunking                 ; Narrow FM           ;      10000; Data
+   147056000; taxi                     ; Narrow FM           ;      10000; taxis
+   147206500; ?2                       ; Narrow FM           ;      10000; Untagged
+   147250000; ?                        ; Narrow FM           ;      10800; Untagged
+   147336000; Vigilancia_Env           ; Narrow FM           ;      10000; oficial
+   147375000; Vigilancia *             ; Narrow FM           ;      10000; Vigilancia
+   147390000; RPT NAL                  ; Narrow FM           ;      10000; Radioaficionados
+   147463500; piratax                  ; Narrow FM           ;      10000; Pirata
+   147573500; ?                        ; Narrow FM           ;      10000; Untagged
+   147612000; Ambulancia               ; Narrow FM           ;      10000; Emergencias
+   147676800; ?                        ; Narrow FM           ;      10000; Untagged
+   147711500; Taxi                     ; Narrow FM           ;      10000; taxis
+   147732000; vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   147962000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   147988200; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   148015500; ?                        ; Narrow FM           ;      10000; Untagged
+   148061000; ?                        ; Narrow FM           ;      10000; Untagged
+   148175500; Finca                    ; Narrow FM           ;      10800; Otro Uso
+   148189500; tax?                     ; Narrow FM           ;      10800; Untagged
+   148195600; ?                        ; Narrow FM           ;      10000; Untagged
+   148212500; ?                        ; Narrow FM           ;      10800; Untagged
+   148237000; Taxi                     ; Narrow FM           ;      10000; taxis
+   148250000; Boston                   ; Narrow FM           ;      10000; Emergencias
+   148333300; ?                        ; Narrow FM           ;      10000; taxis
+   148333500; Trunking                 ; Narrow FM           ;      10000; Data
+   148350500; taxis                    ; Narrow FM           ;      10000; taxis
+   148400500; Puma                     ; Narrow FM           ;      10000; Vigilancia
+   148421100; taxi                     ; Narrow FM           ;      10000; taxis
+   148425000; piratax                  ; Narrow FM           ;      10000; Pirata
+   148438500; taxis Env                ; Narrow FM           ;      10000; taxis
+   148481500; ?                        ; Narrow FM           ;      10000; Untagged
+   148608000; ?                        ; Narrow FM           ;      10000; Untagged
+   148687500; Control V                ; Narrow FM           ;       6400; Vigilancia
+   148712000; Vigilancia Confama       ; Narrow FM           ;      10000; Vigilancia
+   148750000; taxi GPS                 ; Narrow FM           ;       6400; taxis
+   148775500; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   148787500; Red de apoyo             ; Narrow FM           ;      10000; oficial
+   148800400; Vigilancia               ; Narrow FM           ;      10000; Vigilancia
+   148813500; Trunking                 ; Narrow FM           ;      10000; Data
+   148814600; Trunking                 ; Narrow FM           ;      10000; Data
+   148887800; Trunking                 ; Narrow FM           ;      10000; Data
+   148905000; Vigilancia Interno       ; Narrow FM           ;      10000; Otro Uso
+   149000000; ?                        ; Narrow FM           ;      10000; Untagged
+   149062000; ?                        ; Narrow FM           ;      10000; Untagged
+   149081800; ?                        ; Narrow FM           ;      10000; Untagged
+   149112500; Control V                ; Narrow FM           ;      10000; Vigilancia
+   149174800; Taxi GPS                 ; Narrow FM           ;      10000; taxis
+   149208400; ?                        ; Narrow FM           ;      10000; taxis
+   149225500; taxis                    ; Narrow FM           ;      10000; taxis
+   149263300; Trunking                 ; Narrow FM           ;      10000; Data
+   149306500; piratax                  ; Narrow FM           ;      10000; Pirata
+   149325000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   149337500; Monitoreo Envigado       ; Narrow FM           ;      10000; oficial
+   149386500; Aguila                   ; Narrow FM           ;      10000; Vigilancia
+   149412000; Transito                 ; Narrow FM           ;      10000; oficial
+   149425100; Control V                ; Narrow FM           ;      10000; Vigilancia
+   149451000; Trunking                 ; Narrow FM           ;      10000; Data
+   149462000; taxis ENV                ; Narrow FM           ;      10000; taxis
+   149475000; Coyotes                  ; Narrow FM           ;      10000; Untagged
+   149486500; ?                        ; Narrow FM           ;      10000; Untagged
+   149556900; Trunking                 ; Narrow FM           ;      12000; Data
+   149600500; ?                        ; Narrow FM           ;      10000; Untagged
+   149615500; ?                        ; Narrow FM           ;      12000; Untagged
+   149635500; ?                        ; Narrow FM           ;      12000; Untagged
+   149655500; ?                        ; Narrow FM           ;      12000; Untagged
+   149688000; ?                        ; Narrow FM           ;      12000; Untagged
+   149845600; taxi                     ; Narrow FM           ;      10000; taxis
+   149862700; taxi                     ; Narrow FM           ;      10000; taxis
+   150001300; ?                        ; Narrow FM           ;      10000; Untagged
+   150051000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   150112500; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   150125700; Taxi c1                  ; Narrow FM           ;      11200; taxis
+   150163500; pastor                   ; Narrow FM           ;      10000; Untagged
+   150175000; taxi GPS                 ; Narrow FM           ;      10000; taxis
+   150213500; Taxi                     ; Narrow FM           ;      11200; taxis
+   150240000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   150262600; taxi                     ; Narrow FM           ;      10000; taxis
+   150350500; Taxi c2                  ; Narrow FM           ;      11200; taxis
+   150370300; taxi                     ; Narrow FM           ;      10000; taxis
+   150385000; Transporte               ; Narrow FM           ;      10000; Transporte
+   150400000; Control V.               ; Narrow FM           ;      10000; oficial
+   150538608; Trunking                 ; Narrow FM           ;      10000; Data
+   150707500; taxi                     ; Narrow FM           ;      10000; taxis
+   150776000; Transporte               ; Narrow FM           ;      10000; Transporte
+   151056000; taxi                     ; Narrow FM           ;      10000; taxis
+   151075000; ?                        ; Narrow FM           ;      10000; Untagged
+   151125500; Nazareth                 ; Narrow FM           ;      10000; AP
+   151161500; ?                        ; Narrow FM           ;      10000; Untagged
+   151175000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   151238000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   151325000; ?                        ; Narrow FM           ;      10000; Untagged
+   151462000; Central                  ; Narrow FM           ;      14400; Vigilancia
+   151575500; Transporte               ; Narrow FM           ;      10000; Transporte
+   151725000; ambulancia               ; Narrow FM           ;      10000; Emergencias
+   151787000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   152037500; Piratax                  ; Narrow FM           ;       6000; Pirata
+   152100500; Control V                ; Narrow FM           ;      10000; Vigilancia
+   152185000; piratax                  ; Narrow FM           ;      11000; Pirata
+   152200000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   152513000; Metro / segurcol         ; Narrow FM           ;      10000; oficial
+   152700500; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   152863000; Control v                ; Narrow FM           ;      11000; Vigilancia
+   153049400; taxis                    ; Narrow FM           ;      10000; taxis
+   153187200; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   153365200; Trunking                 ; Narrow FM           ;      10000; Data
+   153413000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   153525500; taxis                    ; Narrow FM           ;      10000; taxis
+   153689600; taxis                    ; Narrow FM           ;      10000; taxis
+   153812300; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   154100000; ?                        ; Narrow FM           ;      10000; Vigilancia
+   154151000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   154565000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   154825100; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   155038800; Trunking                 ; Narrow FM           ;      10000; Data
+   155253000; ? F                      ; Narrow FM           ;      10000; Untagged
+   155313500; ?                        ; Narrow FM           ;      10000; Untagged
+   155350900; ?                        ; Narrow FM           ;      10000; Untagged
+   155375500; j's                      ; Narrow FM           ;      10000; Vigilancia
+   155613000; Ambulancias              ; Narrow FM           ;      10000; Emergencias
+   155961500; Cobra                    ; Narrow FM           ;      10000; oficial,Vigilancia
+   156186600; doña Irene               ; Narrow FM           ;      10000; Untagged
+   156263800; Trunking                 ; Narrow FM           ;      10000; Data
+   156360500; Puma                     ; Narrow FM           ;      10000; Transporte
+   156440000; tax                      ; Narrow FM           ;      10000; Untagged
+   156564000; ?                        ; Narrow FM           ;      10000; Untagged
+   156689000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   156750500; Taxi GPS                 ; Narrow FM           ;      10000; taxis
+   156814000; Trunking                 ; Narrow FM           ;      10000; Data
+   156912500; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   157013000; ?                        ; Narrow FM           ;      10000; Untagged
+   157025500; ?                        ; Narrow FM           ;      10000; Untagged
+   157264600; Trunking                 ; Narrow FM           ;      10000; Data
+   157412500; Transito MDE             ; Narrow FM           ;      10000; oficial
+   157450500; Trunking                 ; Narrow FM           ;      10000; Data
+   157462500; Taxi                     ; Narrow FM           ;      10000; taxis
+   157649200; ?                        ; Narrow FM           ;      10000; Untagged
+   157738400; Taxi                     ; Narrow FM           ;      10000; taxis
+   157848560; ?                        ; Narrow FM           ;      10000; Untagged
+   158000000; ?                        ; Narrow FM           ;      10000; Untagged
+   158212500; Taxi                     ; Narrow FM           ;      10000; taxis
+   158238000; Control V                ; Narrow FM           ;      10000; Vigilancia
+   158250000; Monitoreo Itagui         ; Narrow FM           ;      10000; oficial
+   158385000; ?                        ; Narrow FM           ;      10000; Untagged
+   158474800; taxis                    ; Narrow FM           ;      10000; taxis
+   158906200; ?                        ; Narrow FM           ;       5000; Untagged
+   158950000; Turibus?                 ; Narrow FM           ;      10000; Untagged
+   159076100; Control V finca          ; Narrow FM           ;      10000; Vigilancia
+   159100100; Trunking                 ; Narrow FM           ;      10000; Data
+   159137500; quintana                 ; Narrow FM           ;      10000; Untagged
+   159175000; Obreros                  ; Narrow FM           ;       5000; Untagged
+   159363300; Trunking                 ; Narrow FM           ;      10000; Data
+   159399900; Taxi                     ; Narrow FM           ;      10000; taxis
+   159586800; Trunking                 ; Narrow FM           ;      10000; Data
+   159726000; Control V                ; Narrow FM           ;      10000; Untagged
+   159790000; ?                        ; Narrow FM           ;      10000; Untagged
+   159937000; Control V                ; Narrow FM           ;      11000; Vigilancia
+   160000000; Trunking                 ; Narrow FM           ;      10000; Data
+   160014700; taxi                     ; Narrow FM           ;      11000; taxis
+   160200700; ?                        ; Narrow FM           ;      10000; Untagged
+   160265500; Control V                ; Narrow FM           ;      10000; Vigilancia
+   160514500; ?                        ; Narrow FM           ;      10000; Untagged
+   160650500; ?                        ; Narrow FM           ;      10000; Untagged
+   160706500; taxi                     ; Narrow FM           ;      11200; taxis
+   160711000; Bendicion                ; Narrow FM           ;      10000; Untagged
+   160856000; taxi                     ; Narrow FM           ;      11200; taxis
+   161175300; taxi                     ; Narrow FM           ;      10000; taxis
+   161189000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   161240100; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   161284900; ?                        ; Narrow FM           ;      11200; Untagged
+   161362400; Trunking                 ; Narrow FM           ;      10000; Data
+   161401000; Transporte               ; Narrow FM           ;      10000; Transporte
+   161413500; Control V                ; Narrow FM           ;      10000; Vigilancia,oficial
+   161526500; Taxi                     ; Narrow FM           ;      10000; taxis
+   161677000; ?                        ; Narrow FM           ;      10000; Untagged
+   161690000; taxis                    ; Narrow FM           ;      10000; taxis
+   161811000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   162101000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   162152000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   162273600; ?                        ; Narrow FM           ;      10000; Untagged
+   162490000; Piratax                  ; Narrow FM           ;      10000; Pirata
+   163301000; taxi                     ; Narrow FM           ;      10000; taxis
+   163614000; Ambulancia               ; Narrow FM           ;      10000; Emergencias
+   164013800; Trunking                 ; Narrow FM           ;      10000; Data
+   164687600; ?                        ; Narrow FM           ;      10000; Untagged
+   165013000; Ambulancia               ; Narrow FM           ;      10000; Emergencias
+   165261900; Trunking                 ; Narrow FM           ;      10000; Data
+   165465300; taxis                    ; Narrow FM           ;      10000; taxis
+   165652000; Control v                ; Narrow FM           ;      10000; Vigilancia
+   166239000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   166407000; Piratax                  ; Narrow FM           ;      10000; Pirata
+   167075100; Control Patron           ; Narrow FM           ;      10000; Vigilancia
+   167476000; ?                        ; Narrow FM           ;      10000; Untagged
+   168151900; transp                   ; Narrow FM           ;      10000; Untagged
+   168500000; Transporte Bello         ; Narrow FM           ;      10000; Untagged
+   168712500; Cobra                    ; Narrow FM           ;      10000; Untagged
+   171526000; ?                        ; Narrow FM           ;      10000; Untagged
+   171651000; Aguila                   ; Narrow FM           ;      10000; Vigilancia
+   173075500; ?                        ; Narrow FM           ;      10000; Untagged
+   173650500; ?                        ; Narrow FM           ;      10000; Untagged
+   179751000; TV                       ; Narrow FM           ;      49600; Untagged
+   191750000; TV                       ; Narrow FM           ;      49600; Untagged
+   305500000; Musica                   ; Narrow FM           ;      41600; Untagged
+   327100000; tropicana?               ; Narrow FM           ;      50000; Untagged
+   434800000; HK4LRM /UHF              ; Narrow FM           ;      10000; Radioaficionados
+   442227000; Control V.               ; Narrow FM           ;      10000; Vigilancia
+   535750000; Señal Colombia           ; Narrow FM           ;      32000; Untagged
+   682123000; Diadema                  ; Narrow FM           ;      32400; Untagged
+   682999000; mic                      ; Narrow FM           ;      27000; Untagged
+  1468810000; ?                        ; Narrow FM           ;      10000; Untagged
+  2414300000; cam                      ; WFM (mono)          ;     500000; Untagged
