@@ -28,9 +28,10 @@
 
 ####Clonar este repositorio en los clientes locales (compus de quien venga al parche) y asi refrescar un poco lo aprendido con GitHub & GitHub Pages.
 
-#### Reconectado con la idea de opacidad ---> TOR:
+#### Reconectado con la idea de opacidad ---> TOR HiddenServices:
 https://docs.google.com/presentation/d/1s0i5RAV2gwBj4mg4YaLbroRL5FluqNC6ESt8vGh0ZGM/edit?usp=sharing
-Mirarlo hasta la ultima pg ya que sirve de intro al tema del dia.
+
+(Mirarlo hasta la ultima pg ya que sirve de intro al tema del dia).
 
 ####Airtime RadioLibre: Explicar como funciona la interface de programac¡on.
 ####Mirar algun clip de radio pirata
