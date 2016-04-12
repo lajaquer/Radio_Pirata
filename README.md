@@ -22,8 +22,7 @@
     \  \:\       \__\/      \  \:\        \  \:\           \__\/    \  \:\    
      \__\/                   \__\/         \__\/                     \__\/    
 ```
-###Proceso de experimentación de La Jaquer Escool 2016
-### Objetivo: Poner la radio a sonar!
+###Proceso de experimentación de La Jaquer Escool 2016 para poner la radio a sonar!
 
 ## Orden del Dia
 
