@@ -1,0 +1,478 @@
+#!/usr/bin/perl
+
+# papazulu 1.0 - a numbers station and one-time-pad program
+#
+#    Copyright (C) <2008>  <Flavio Cardone>
+#    fcardone at w p d o t p l
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+use strict;
+#use warnings;
+
+
+my $decode = "";
+
+
+
+if ($ARGV[0] ne "-c" && $ARGV[0] ne "-e" && $ARGV[0] ne "-d" && $ARGV[0] ne "-m") {
+	print "usage:\n\tcreate pads: -c\n\tencode: -e\n\tdecode: -d\n\tprepare sound message: -m\n";
+}
+
+### create ###
+
+if ($ARGV[0] eq "-c") {
+	my $input = "";
+	my $length = 0;
+	my $pads = 0;
+	my $totalpads = 0;
+	my $fullpad = "";
+	my $padfile = "";
+	print "Length of pad in characters (max: 10000): ";
+	chomp (my $padlength = <STDIN>);
+	die "Input doesn't make sense :-) Bye. \n" if (($padlength < 1) || ($padlength > 10000));
+	print "Number of pads to create (max: 999) : ";
+	chomp ($totalpads = <STDIN>);
+	die "Input doesn't make sense :-) Bye. \n" if (($totalpads < 1) || ($totalpads > 999));
+	print "File to contain the pads (default: pad.txt): ";
+	$padfile = <STDIN>;
+	$padfile = "pad.txt" if ($padfile == "\n");
+	chomp ($padfile);
+	open (PAD,">$padfile") or die ("I can't seem to open that file, sorry.\n");
+	close (PAD);
+	open (PAD,">>$padfile");
+	print "$padfile is ok, working...\nTo speed up the process, do something on your computer (move the mouse, write something, etc)\n";
+	while ($pads < $totalpads) {
+		printf "\n%03d\n", $pads+1;
+		while ($length < $padlength) {
+			open (IN,"</dev/random");
+			sysread IN,$input,1;
+			$decode = ord $input;
+			$decode = int ($decode%26);
+			$fullpad = join('', $fullpad, chr 65+$decode );
+			print ".";
+			$|=1;
+			$length = $length+1;
+			if ($length%5 == 0) {
+				$fullpad = "$fullpad ";
+				print " ";
+			}
+			if ($length%50 == 0) {
+				$fullpad = "$fullpad\n";
+				print " $length\\$padlength\n";
+			}		
+		}
+		$pads = $pads+1;
+		$pads = sprintf ("%03d", $pads);
+		print PAD "\n$pads\n";
+		print PAD "$fullpad\n";
+		$fullpad = "";
+		$length = "0";
+		print PAD "***";
+	}
+	close (PAD);
+}
+
+### encode ###
+
+if ($ARGV[0] eq "-e") {
+
+  my $plain = ""; #old ARGV(1)
+  my $pad = ""; #old ARGV(2)
+  my $pad_number = 0; #old ARGV(3)
+  my $message_length = -1; #old ARGV(4)
+  my $output_file = "";
+  my $number = -1;
+  my $padfile = "";
+
+  print "Plaintext file (default: plain.txt): ";
+  $plain = <STDIN>;
+  $plain = "plain.txt" if ($plain eq "\n");
+  chomp ($plain);
+  open (PLAIN,"<$plain") or die ("I can't seem to open that file, sorry.\n");
+  $/ = undef;
+  $plain = <PLAIN>;
+  $/ = "\n";
+
+
+  print "Padfile (default: pad.txt): ";
+  $padfile = <STDIN>;
+  $padfile = "pad.txt" if ($padfile eq "\n");
+  chomp ($padfile);
+  open (PAD,"<$padfile") or die ("I can't seem to open that file, sorry.\n");
+  $/ = undef;
+  $pad = <PAD>;
+  $/ = "\n";
+  $pad =~ s/\s//g;	
+
+  print "Pad number (DO NOT REUSE PADS): ";
+  $pad_number = <STDIN>;
+  chomp ($pad_number);
+  $pad_number = sprintf ("%03d", $pad_number);
+  my $key = "";
+  my $charpos = 0;
+
+  if ($pad =~ /($pad_number)([A-Z]+)\*\*\*/) {
+	  $number = $1;
+	$key = $2;
+	$key =~ s/\s//g;
+   }
+
+  die ("Error: pad number doesn't exist\n") if ($number == -1);
+
+  my $message_length = length ($key);
+  
+  print "Output file (default: crypto.txt): ";
+  $output_file = <STDIN>;
+  $output_file = "crypto.txt" if ($output_file eq "\n");
+  chomp ($output_file);
+  open (OUTPUT,">$output_file") or die ("I can't seem to open that file, sorry.\n");
+
+
+$plain = uc $plain;
+
+$plain =~ s/\W//g;
+
+
+if ($message_length ne undef || length ($plain) < $message_length ) {
+	my $eom = "EOM";
+	my $origlength = length ($plain);
+	while ($charpos+$origlength < $message_length) {
+		my $tempchar = substr ($eom,$charpos%3,1);
+		$plain = "$plain$tempchar";
+		$charpos = $charpos+1;
+	}
+}
+
+
+$charpos = 0;
+while ($charpos < length ($plain)) {
+	my $templain = substr ($plain,$charpos,1);
+	my $keychar = substr ($key,$charpos%length($key),1);
+	my $plainasc = ord ($templain)-65;
+	my $keyasc = ord ($keychar)-64;
+	my $newasc = (($plainasc + $keyasc)%26) +65;
+	substr ($plain,$charpos,1,chr $newasc);
+	$charpos = $charpos +1;
+}
+$charpos = 0;
+my $plainout = "";
+while ($charpos < length ($plain)) {
+	my $tempchar = substr ($plain,$charpos,1);
+	$plainout = "$plainout$tempchar";
+	$charpos = $charpos+1;
+                        if ($charpos%5 == 0) {
+                                $plainout = "$plainout ";
+                        }
+                        if ($charpos%50 == 0) {
+                                $plainout = "$plainout\n";
+                        }
+
+}
+
+print OUTPUT "$plainout\n";
+}
+
+### decode ###
+
+if ($ARGV[0] eq "-d") {
+
+my $crypto = "";# old $ARGV(1)
+my $padfile = "";# old $ARGV(2)
+my $pad_number = "";# old $ARGV(3)
+my $output = "";
+my $pad = "";
+my $key = "";
+my $charpos = 0;
+my $number = -1;
+my $test = "";
+
+  print "Encrypted file (default: crypto.txt): ";
+  $crypto = <STDIN>;
+  $crypto = "crypto.txt" if ($crypto eq "\n");
+  chomp ($crypto);
+  open (CRYPTO,"<$crypto") or die ("I can't seem to open that file, sorry.\n");
+  $/ = undef;
+  $crypto = <CRYPTO>;
+  $/ = "\n";
+  $crypto =~ s/\s//g;	
+  
+  print "Padfile (default: pad.txt): ";
+  $padfile = <STDIN>;
+  $padfile = "pad.txt" if ($padfile eq "\n");
+  chomp ($padfile);
+  open (PAD,"<$padfile") or die ("I can't seem to open that file, sorry.\n");
+  $/ = undef;
+  $pad = <PAD>;
+  $/ = "\n";
+  $pad =~ s/\s//g;
+
+  print "Output file (default: output.txt, enter \"s\" for stdout, \"b\" for both): ";
+  $test = <STDIN>;
+  $output = $test;
+  $output = "output.txt" if (($test eq "\n") || ($test eq "b\n"));
+  chomp ($test);
+  chomp ($output);
+  if ($output ne "s") {
+    open (OUTPUT,">$output") or die ("I can't seem to open that file, sorry.\n");
+  }
+
+  print "Pad number: ";
+  $pad_number = <STDIN>;
+  chomp ($pad_number);
+  $pad_number = sprintf ("%03d", $pad_number);
+  my $key = "";
+  my $charpos = 0;
+
+  if ($pad =~ /($pad_number)([A-Z]+)\*\*\*/) {
+          $number = $1;
+        $key = $2;
+        $key =~ s/\s//g;
+    }
+
+  die ("Error: pad number doesn't exist\n") if ($number == -1);
+
+$crypto =~ s/\s//g;
+
+while ($charpos < length ($crypto)) {
+	my $tempcrypto = substr ($crypto,$charpos,1);
+	my $tempkey = substr ($key,$charpos%length($key),1);
+	my $cryptoasc = ord ($tempcrypto)-65;
+	my $keyasc = ord ($tempkey)-64;
+	my $newasc = $cryptoasc-$keyasc;
+	if ($newasc > -1) {
+		$newasc = 65+$newasc;
+	}
+	if ($newasc < 0) {
+		$newasc = 91+$newasc;
+	}
+	substr ($crypto,$charpos,1,chr $newasc);
+	$charpos = $charpos +1;
+}
+$charpos = 0;
+my $cryptoout = "";
+while ($charpos < length ($crypto)) {
+	my $tempchar = substr ($crypto,$charpos,1);
+	$cryptoout = "$cryptoout$tempchar";
+	$charpos = $charpos+1;
+                        if ($charpos%5 == 0) {
+                                $cryptoout = "$cryptoout ";
+                        }
+                        if ($charpos%50 == 0) {
+                                $cryptoout = "$cryptoout\n";
+                        }
+
+}
+
+if ($test ne "s") {
+    print OUTPUT "$cryptoout\n";
+    }  
+if (($test eq "s") || ($test eq "b")) {
+    print "$cryptoout\n";
+  }
+}
+
+### prepare message ###
+
+if ($ARGV[0] eq "-m") {
+
+my $messagefile = ""; # $ARGV[1];
+my $outputfile = ""; # $ARGV[2];
+my $oggdirectory = ""; # $ARGV[3];
+my $realout = "";
+
+  print "Text message file (default: crypto.txt): ";
+  $messagefile = <STDIN>;
+  $messagefile = "crypto.txt" if ($messagefile eq "\n");
+  chomp ($messagefile);
+  open (IN,"<$messagefile") or die ("I can't seem to open that file, sorry.\n");
+  close IN;
+
+  print "Sound message file (default: message.ogg): ";
+  $outputfile = <STDIN>;
+  $outputfile = "message.ogg" if ($outputfile eq "\n");
+  chomp ($outputfile);
+  open (OUT,">$outputfile") or die ("I can't seem to open that file, sorry.\n");
+  close OUT;
+
+  $realout = $outputfile;
+  $outputfile = "temp$outputfile";
+  
+  print "Sound files directory (default: /usr/share/papazulu/sound ): ";
+  $oggdirectory = <STDIN>;
+  $oggdirectory = "/usr/share/papazulu/sound" if ($oggdirectory eq "\n");
+  chomp ($oggdirectory);
+  open (PAUSE,"<$oggdirectory/PAUSE.ogg") or die ("Not that one, sorry.\n");
+  close PAUSE;
+
+print "Enter header: ";
+my $header = <STDIN>;
+$header = uc $header;
+print "Enter times to repeat header: ";
+my $header_repeat = <STDIN>;
+chomp $header_repeat;
+print "Pad number: ";
+my $pad_number = <STDIN>;
+chomp $pad_number;
+
+$/ = undef;
+
+open (OUT,">>$outputfile");
+open (IN,"<$messagefile");
+
+open (PAUSE,"<$oggdirectory/PAUSE.ogg");
+my $pause = <PAUSE>;
+close (PAUSE);
+
+open (GROUP,"<$oggdirectory/GROUP.ogg");
+my $group = <GROUP>;
+close (GROUP);
+
+open (MSG,"<$oggdirectory/MESSAGE.ogg");
+my $msg = <MSG>;
+close (MSG);
+
+open (TEXT,"<$oggdirectory/TEXT.ogg");
+my $text = <TEXT>;
+close (TEXT);
+
+open (REPEAT,"<$oggdirectory/REPEAT.ogg");
+my $repeat = <REPEAT>;
+close (REPEAT);
+
+open (EOM,"<$oggdirectory/EOM.ogg");
+my $eom = <EOM>;
+close (EOM);
+
+open (EOT,"<$oggdirectory/EOT.ogg");
+my $eot = <EOT>;
+close (EOT);
+
+
+
+my $count = 0;
+my $count1 = 0;
+
+my $message = <IN>;
+
+#header
+while ($count < $header_repeat) {
+	while ($count1 < length $header) {
+		my $char = substr $header,$count1,1;		
+		open (NUMBER,"<$oggdirectory/$char.ogg");
+		my $sound = <NUMBER>;
+		close (NUMBER);
+		print OUT "$sound";
+		$count1 = $count1 + 1;
+		}
+	$count1 = 0;	
+	$count = $count + 1;
+	print OUT "$pause";
+	}
+
+#number of groups
+
+$count = 0;
+$count1 = 0;
+
+$message =~ s/\s//g;
+my $groups = int (((length $message)-1) / 5) +1;
+
+while ($count < 2) {
+	print OUT "$group";
+	while ($count1 < length $groups) {
+		my $char = substr $groups,$count1,1;		
+		open (NUMBER,"<$oggdirectory/$char.ogg");
+		my $sound = <NUMBER>;
+		close (NUMBER);
+		print OUT "$sound";
+		$count1 = $count1 + 1;
+		}
+	$count1 = 0;	
+	$count = $count + 1;
+	print OUT "$pause";
+	}
+
+
+
+#pad to use
+
+$count = 0;
+$count1 = 0;
+
+while ($count < 2) {
+	print OUT "$msg";
+	while ($count1 < length $pad_number) {
+		my $char = substr $pad_number,$count1,1;		
+		open (NUMBER,"<$oggdirectory/$char.ogg");
+		my $sound = <NUMBER>;
+		close (NUMBER);
+		print OUT "$sound";
+		$count1 = $count1 + 1;
+		}
+	$count1 = 0;	
+	$count = $count + 1;
+	print OUT "$pause";
+	}
+
+#reading the message now
+
+$count = 0;
+$count1 = 0;
+
+print OUT "$text";
+print OUT "$text";
+
+my $group_repeat = 0;
+
+while ($count < 2) {
+	print OUT "$message";
+	while ($count1 < length $message) {
+		my $char = substr $message,$count1,1;		
+		open (NUMBER,"<$oggdirectory/$char.ogg");
+		my $sound = <NUMBER>;
+		close (NUMBER);
+		print OUT "$sound";
+		$count1 = $count1 + 1;
+			if ($count1%5 == 0) { 
+				print OUT "$pause";
+				$group_repeat = $group_repeat +1;
+					if ($group_repeat%2 != 0) {
+					$count1 = $count1 - 5;
+                	        }
+			}
+		}
+	$count1 = 0;	
+	$count = $count + 1;
+	if ($count != 2) {
+		print OUT "$repeat";
+		print OUT "$repeat";
+		}
+	}
+
+print OUT "$eom";
+print OUT "$eom";
+print OUT "$eom";
+print OUT "$eot";
+print OUT "$eot";
+print OUT "$eot";
+
+
+# last } - don't touch!
+close (OUT);
+
+system `ffmpeg -loglevel quiet -i $outputfile $realout`;
+
+
+}

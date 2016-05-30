@@ -1,0 +1,7 @@
+Just copy the "papazulu" perl file to where you want and the "sound" 
+directory where you will remember where it is - the default is /usr/share/papazulu/sounds.
+
+Probably the best way to install is to copy the whole papazulu directory to /usr/share/ and 
+link the perl file to /usr/bin/papazulu
+
+The program will of course work even if installed somewhere else.

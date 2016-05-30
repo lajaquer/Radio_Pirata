@@ -1,0 +1,9 @@
+1.0 - 12 Jul 08 - The program now asks for all relevant information and
+performs sanity checks.
+
+0.2 - 27 Feb 08 - the "create" function is now more user-friendly. No 
+parameters need to be entered on the command line. Output can be chosen. 
+Program checks for nonsensical parameters. Progress dots are shown on 
+screen.
+
+0.1 - 26 Feb 08 - initial release

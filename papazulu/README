@@ -1,0 +1,121 @@
+papazulu - a numbers station and one-time-pad program
+
+version 1.2 - 09 Aug 2014
+
+various bugfixes. ffmpeg polishes the output sound file to make a more polished file. Changes in this README file.
+
+version 1.0 - 12 Jul 2008
+
+This program now more user-friendly, asks all relevant questions and performs sanity checks. 
+Therefore I think it's a bit harder to make a mistake. :-)
+
+I also assume you know what are one-time-pads and numbers stations.
+
+(a) creation of number pads
+===========================
+
+./papazulu -c
+
+Just answer the questions on the screen:
+
+The program will ask you to enter:
+
+1) the length of the pads in characters
+2) how many pads it should create
+3) the name of the pad text file it will create
+
+That's all. Just look at the screen and the progress dots will show you 
+how it's working...
+
+The pads will only contain the letters A-Z.
+
+
+(b) encoding messages
+========================
+
+./papazulu -e
+
+The program will then ask all relevant questions. REMEMBER NEVER TO REPEAT ANY PADS! The 
+plaintext file should contain only letters and spaces, no numbers and no punctuation. If the 
+message is shorter than the pad, the remaining part of the message will be filled with the 
+characters "EOM".
+
+The result will be a message that only contains letters.
+
+
+(c) decoding messages
+=====================
+
+./papazulu -d 
+
+The program will once again ask all relevant questions loading the pads from a file.
+
+If you are, of course, in a situation where you don't want to be caught or 
+intercepted with one time pads, you should be very careful about what you 
+do with them...
+
+
+(d) numbers station
+===================
+
+if you want to have your very own numbers station, in E10 format, then use
+
+./papazulu -m
+
+and the program will ask for everything it needs.
+
+You will also be asked to specify the 
+header of the transmission and how many times it should be repeated. For 
+instance, if you want to send a message to someone known as "D4TG", you 
+might want the sound file to say "delta-four-tango-golf" a few times 
+before the actual transmission, so that it will be clear who will be the 
+recipient.
+
+Then the program will ask you for the number of the pad you used in 
+encoding the message.
+
+If everything goes OK, it will have created an ogg file in the following 
+format:
+
+(1) your header (repeated for the number of times you specify)
+
+    E.g. if your header is "QWH", the voice will say "quebec-whisky-hotel"
+
+(2) "GROUP number_of_groups" (repeated twice)
+
+    E.g. Message GYGYG JIJIJ GYHUQ would have three groups and the voice 
+in the sound file would say "group three".
+
+(3) "MESSAGE pad_number" (repeated twice)
+
+    E.g. if you entered 234 as pad number, the voice would say "message 
+two three four"
+
+(4) the words "TEXT TEXT" to alert that the message is about to be sent
+
+(5) the actual message. Each group is repeated twice, exactly in E10 
+format.
+
+(6) the words "REPEAT REPEAT" to alert that message will be resent
+
+(7) the same message, sent once again the same format as in (5)
+
+(8) the words "END OF MESSAGE" x3 followed by "END OF TRANSMISSION" x3.
+
+
+    
+    Copyright (C) 2008  F Cardone
+    fcardone at w p d o t p l
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
