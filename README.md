@@ -24,6 +24,8 @@
 ```
 ####Proceso de experimentación de La Jaquer Escool 2016 para poner la radio a sonar! (responsable: alejandro duque)
 
+(https://github.com/lajaquer/Radio_Pirata/blob/master/flyerLaJauqerEscool1.jpeg)
+
 ## Orden del Dia
 
 ####Clonar este repositorio en los clientes locales (compus de quien venga al parche) y asi refrescar un poco lo aprendido con GitHub & GitHub Pages.
