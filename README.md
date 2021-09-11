@@ -64,4 +64,9 @@ http://p-node.org/doc/index.php/Radio_Fischli_Weiss
 ###Pendiente:
 Grabar un par de cortinas para radiolibre!
 
+
+![flyer invitacion](https://raw.githubusercontent.com/lajaquer/Radio_Pirata/master/flyerLaJauqerEscool2.jpeg)
+
+
+
 #####Sintax de Markdown para editar esta pagina: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
